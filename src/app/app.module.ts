@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BestPracticeComponent } from '../best-practice/best-practice.component'
-import { ProductComponent } from '../products/product/product.component'
+import { BestPracticeComponent } from './best-practice/best-practice.component'
+import { ProductComponent } from './products/product/product.component'
 import { FormsModule } from '@angular/forms';
+import { CommentModule } from './comments/comments.module'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
