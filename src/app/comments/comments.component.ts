@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommentBlockService } from '../comments-block/comment-block.service'
 
 @Component({
   selector: 'app-comments',
@@ -10,6 +10,13 @@ export class CommentsComponent  {
   user='Ala'
   text='commet de ala'
 
-  constructor() {}
+  constructor(private commentBlockService: CommentBlockService) {}
 
+  increaseNumbers2= () => {
+    this.commentBlockService.increase()
+  }
+
+  getAddition2= () => {
+    this.commentBlockService.getAddition();
+  }
 }
