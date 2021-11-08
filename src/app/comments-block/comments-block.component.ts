@@ -1,4 +1,5 @@
 import { Component,  Input, Output } from '@angular/core';
+import { Observable, Subscriber } from 'rxjs';
 import { CommentBlockService } from './comment-block.service'
 @Component({
   selector: 'app-comments-block',
@@ -8,8 +9,9 @@ export class CommentsBlockComponent  {
 
   constructor(private commentBlockService: CommentBlockService) {}
 
-  @Output() ii=this.commentBlockService.geti();
-  @Output() jj=this.commentBlockService.getj();
+   ii=this.commentBlockService.geti();
+   jj=this.commentBlockService.getj();
+
   private addition=0;
   @Input()  commenter: string;
 
@@ -28,3 +30,4 @@ export class CommentsBlockComponent  {
   }
 
 }
+

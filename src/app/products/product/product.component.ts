@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from './product.service'
+import { Observable, Subscription } from 'rxjs'
+import { catchError, tap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
-  name='this is init value'
+export class ProductComponent {
+  constructor(private productService: ProductService) {}
 
-  doSmth= () => {
-    alert('hello')
+  getMyProducts():Subscription {
+    return this.productService.getProducts().subscribe({
+      next: products => {
+        console.log(products)
+      },
+    })
   }
-  constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }
