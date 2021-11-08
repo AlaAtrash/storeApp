@@ -1,0 +1,6 @@
+<button (click)="getNewJoke()">Get new Joke</button>
+<ul>
+  <li *ngFor="let joke of jokes">
+    <span>{{joke.randomJoke}}</span>
+  </li>
+</ul>
