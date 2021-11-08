@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { BestPracticeComponent } from './best-practice/best-practice.component'
 import { ProductComponent } from './products/product/product.component'
 import { FormsModule } from '@angular/forms';
-import { CommentModule } from './comments/comments.module'
+import { CommentModule } from './comments/comments.module';
+import { ChuckComponent } from './chuck/chuck.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BestPracticeComponent,
-    ProductComponent
+    ProductComponent,
+    ChuckComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
