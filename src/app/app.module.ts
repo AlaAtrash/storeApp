@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BestPracticeComponent } from './best-practice/best-practice.component'
-import { ProductComponent } from './products/product/product.component'
+import { BestPracticeComponent } from './best-practice/best-practice.component';
+import { ProductComponent } from './products/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { CommentModule } from './comments/comments.module';
 import { ChuckComponent } from './chuck/chuck.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,13 +17,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BestPracticeComponent,
     ProductComponent,
     ChuckComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommentModule
+    CommentModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
