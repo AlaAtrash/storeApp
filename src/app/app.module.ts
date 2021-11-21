@@ -8,8 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { CommentModule } from './comments/comments.module'
 import { ProductsModule } from './products/product/products.module'
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from './material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RxjsComponent } from './rxjs/rxjs/rxjs.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -18,14 +19,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     BestPracticeComponent,
+    RxjsComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     CommentModule,
     ProductsModule,
-    MaterialModule,
     BrowserAnimationsModule,
     BrowserModule,
     RouterModule.forRoot([
