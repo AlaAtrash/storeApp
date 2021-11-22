@@ -5,14 +5,29 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './best-practice.component.html',
   styleUrls: ['./best-practice.component.css']
 })
-export class BestPracticeComponent implements OnInit {
+export class BestPracticeComponent  {
 
   x=0;
 
-
-  ngOnInit() {
-
+  setValue(x) {
+    this.x=x
   }
+
+  getValue() {
+    return this.x
+  }
+
+  doubleVal(x) {
+    return x *2
+  }
+
+
+  multiplyX(y) {
+    const double= this.doubleVal(y)
+    return double + 1
+  }
+
+
 
 
 }
